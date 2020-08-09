@@ -1,0 +1,82 @@
+*What is subdomain takeover?
+sub division of a domain = sub domain.
+
+practical:
+
+github tools for subdomain takeover:sublist3r
+https://github.com/aboul3la/Sublist3r
+
+what is sublister?
+written in python find the subdomains.
+
+$ sublist3r -d domain.com 
+o/p:- enumarate subdomains for target and gives us subdomains.
+
+ tools 2:-
+finddomain, written in go
+search and download it
+
+$ finddomain -h
+$ finddomain -t domain.com -r 
+o/p: gives us domains.
+
+note: more speedy recomended 
+
+tool3:- 
+
+step 2:
+$ ping <sub domain>
+$ whois <sub domain ip we got via ping>
+$
+
+automated tools:
+for mass hunting we use 3 tools:-
+aquatone
+subzy -------> best tool
+subjack
+
+use this resource for subdomain hunting:
+can i takeover xyz? by add flow
+
+using the finddomain to resolve the subdomains:
+$ finddomain -t domain.com -r | tee domainsubs.txt
+
+subzy:
+$ cat domain.txt | wc
+$ aquatone
+$ subjack
+$ subzy
+__________________
+$ subzy -targets domains.txt 
+to exclude http error do this 
+$ subzy -targets domains.txt -hide_fails
+
+
+brand aquasitions:
+lets take an organizations so it acquired some other companies and if we found sub-domains takeover in those website then we can conclude it as well as we can report them..
+_______________
+_______________>
+so in some case we cannot find sub domain takeover on those websites so we can go with brand acquasition
+
+how to pick up?
+2 ways we can go such as belwo:
+1.crunchbase
+2. Trademarks
+3. Reverse whois.
+
+
+1. https://www.crunchbase.com/search/acquisitions
+2. 
+Trademark In Google: "Facebook Inc (c) 2020" if matches its our target
+ 
+3.
+reverse whois 
+
+in this 1st do whois and as an output we got as 
+Tech Organization: xyz.com
+Tech Email: domain@fb.com
+
+now do using 3 tools below:
+1. Viewdns.info --->restrict only some result
+2. https://github.com/vysecurity/DomLink
+3. WhoisXMLAPI--->best as free
